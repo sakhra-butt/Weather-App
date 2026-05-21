@@ -10,7 +10,7 @@
     inset: 0;
     background: radial-gradient(circle at center, rgba(0,0,0,0.05), rgba(0,0,0,0.25));
     z-index: 0;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 body {
@@ -27,23 +27,25 @@ body {
 
 .bg-text {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     width: 100%;
     text-align: center;
 
-    font-size: 140px;
+    font-size: clamp(40px, 8vw, 160px);
     font-weight: 900;
-    line-height: 1.2;
-    letter-spacing: 12px;
+    line-height: 1.1;
+    letter-spacing: 10px;
 
-    color: rgba(255, 255, 255, 0.281);
+    color: rgba(255, 255, 255, 0.25);
 
     z-index: 0;
     pointer-events: none;
     user-select: none;
 }
+
 
 .card {
     width: 100%;
@@ -56,13 +58,14 @@ body {
     color: #fff;
     text-align: center;
     transition: 0.3s ease;
-
-    min-width: 0; 
+    z-index: 1;
+    min-width: 0;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
+
 
 .search {
     display: flex;
@@ -96,6 +99,7 @@ body {
 .search button img {
     width: 18px;
 }
+
 
 .weather-icon {
     width: 100px;
@@ -137,6 +141,7 @@ body {
     font-weight: bold;
 }
 
+
 .error {
     display: none;
     color: #ffdddd;
@@ -151,28 +156,18 @@ body {
 }
 
 
-
 @media (min-width: 1200px) {
     .card {
         transform: scale(1.05);
     }
-
-    .bg-text {
-        font-size: 160px;
-    }
 }
 
-@media (max-width: 1199px) {
-    .bg-text {
-        font-size: 110px;
-        letter-spacing: 10px;
-    }
-}
 
 @media (max-width: 768px) {
     .bg-text {
-        font-size: 80px;
+        font-size: clamp(35px, 10vw, 110px);
         letter-spacing: 6px;
+        top: 30%;
     }
 
     .card {
@@ -188,17 +183,16 @@ body {
     }
 }
 
+
 @media (max-width: 500px) {
     body {
         padding: 15px;
-        align-items: center;
-        justify-content: center; 
     }
 
     .bg-text {
-        font-size: 45px;
+        font-size: clamp(30px, 12vw, 70px);
         letter-spacing: 3px;
-        line-height: 1.1;
+        top: 28%;
     }
 
     .card {
