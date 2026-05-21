@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .overlay {
     position: absolute;
     inset: 0;
@@ -19,7 +20,9 @@ body {
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     position: relative;
     overflow-x: hidden;
+    padding: 15px;
 }
+
 .bg-text {
     position: absolute;
     top: 50%;
@@ -28,7 +31,7 @@ body {
 
     font-size: 140px;
     font-weight: 900;
-    line-height: 2.0; 
+    line-height: 2.0;
     letter-spacing: 12px;
     text-align: center;
 
@@ -38,8 +41,10 @@ body {
     pointer-events: none;
     user-select: none;
 }
+
 .card {
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     padding: 25px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.15);
@@ -141,18 +146,8 @@ body {
 }
 
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-body {
-    overflow-x: hidden;
-}
-
 
 @media (min-width: 1200px) {
-
     .card {
         transform: scale(1.05);
     }
@@ -164,15 +159,14 @@ body {
 
 
 @media (max-width: 1199px) {
-
     .bg-text {
         font-size: 110px;
         letter-spacing: 10px;
     }
 }
 
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
     .bg-text {
         font-size: 80px;
         letter-spacing: 6px;
@@ -180,7 +174,6 @@ body {
 
     .card {
         width: 90%;
-        max-width: 380px;
     }
 
     .temp {
@@ -194,7 +187,6 @@ body {
 
 
 @media (max-width: 500px) {
-
     body {
         padding: 15px;
     }
