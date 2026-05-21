@@ -10,6 +10,7 @@
     inset: 0;
     background: radial-gradient(circle at center, rgba(0,0,0,0.05), rgba(0,0,0,0.25));
     z-index: 0;
+    pointer-events: none; 
 }
 
 body {
@@ -23,17 +24,19 @@ body {
     padding: 15px;
 }
 
+
 .bg-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 
     font-size: 140px;
     font-weight: 900;
-    line-height: 2.0;
+    line-height: 1.2;
     letter-spacing: 12px;
-    text-align: center;
 
     color: rgba(255, 255, 255, 0.281);
 
@@ -53,6 +56,8 @@ body {
     color: #fff;
     text-align: center;
     transition: 0.3s ease;
+
+    min-width: 0; 
 }
 
 .card:hover {
@@ -157,14 +162,12 @@ body {
     }
 }
 
-
 @media (max-width: 1199px) {
     .bg-text {
         font-size: 110px;
         letter-spacing: 10px;
     }
 }
-
 
 @media (max-width: 768px) {
     .bg-text {
@@ -185,16 +188,17 @@ body {
     }
 }
 
-
 @media (max-width: 500px) {
     body {
         padding: 15px;
+        align-items: center;
+        justify-content: center; 
     }
 
     .bg-text {
         font-size: 45px;
         letter-spacing: 3px;
-        line-height: 1.2;
+        line-height: 1.1;
     }
 
     .card {
