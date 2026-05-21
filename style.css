@@ -18,7 +18,7 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .bg-text {
     position: absolute;
@@ -138,4 +138,56 @@ body {
 
 .weather {
     display: none;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px){
+
+    .bg-text{
+        font-size: 90px;
+        letter-spacing: 8px;
+    }
+
+    .card{
+        width: 90%;
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 500px){
+
+    body{
+        padding: 20px;
+    }
+
+    .bg-text{
+        font-size: 55px;
+        line-height: 1.7;
+        letter-spacing: 5px;
+    }
+
+    .card{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .temp{
+        font-size: 38px;
+    }
+
+    .city{
+        font-size: 20px;
+    }
+
+    .details{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .search input{
+        font-size: 14px;
+    }
 }
